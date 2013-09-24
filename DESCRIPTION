@@ -1,0 +1,14 @@
+Package: Rwebdriver
+Type: Package
+Title: R binding to the Webdriver API
+Version: 0.1
+Date: 2013-09-23
+Author: Christian Rubba <christian.rubba@googlemail.com>
+Maintainer: Christian Rubba <christian.rubba@googlemail.com>
+Description: More about what it does (maybe more than one line)
+Depends:
+    RCurl (>= 1.95-0),
+    RJSONIO
+License: MIT
+Collate:
+    'webdriver.R'
