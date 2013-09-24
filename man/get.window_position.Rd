@@ -1,6 +1,6 @@
 \name{get.window_position}
 \alias{get.window_position}
-\title{Get Current position of a window}
+\title{Get current position of a window}
 \usage{
   get.window_position(handle = NULL)
 }

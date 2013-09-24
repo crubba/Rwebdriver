@@ -1,6 +1,6 @@
-#' Creates a new Webdriver session
+#' Create a new Webdriver session
 #' 
-#' Creates a new Webdriver session with specificed capabilities
+#' This function creates a new Webdriver session with specificed capabilities
 #' @param root a string  giving the Java-Server IP
 #' @param browser a string giving the browser under which the session is started
 #' @param takesScreenshot a logical value indicating whether the session supports taking screenshots of the current page
@@ -34,7 +34,7 @@ start_session <- function(root=NULL, browser = "firefox", javascriptEnabled=TRUE
   seleniumSession <<- sessionList
 }
 
-#' Quites the current session
+#' Quite the current session
 #' 
 #' Deletes current session on the Webdriver Java-Server
 #' @export
@@ -194,7 +194,7 @@ post.window_position <- function(position = NULL, handle = NULL){
                    postfields = toJSON(list(x = position[1], y = position[2]))))
 }
 
-#' Get Current position of a window
+#' Get current position of a window
 #' 
 #' Get the position of the specified window
 #' @param handle a string indicating the handle of the window to be maximized
@@ -251,7 +251,7 @@ window_close <- function(){
          httpheader=c('Content-Type'='application/json;charset=UTF-8'))
 }
 
-#' Refresh window
+#' Refresh page
 #' 
 #' Refresh the current page
 #' @export
@@ -344,7 +344,7 @@ element_css_find <- function(value){
   return(elementID)
 }
 
-#' Find an element via CSS selector
+#' Find an element via partial text matching
 #' 
 #' Search for an element on the page via CSS selector, starting from the document root
 #' @param value a string of text that is searched for in the page
@@ -426,23 +426,6 @@ keys <- function(term = NULL){
                 customrequest = "POST",
                 httpheader = c('Content-Type'='application/json;charset=UTF-8'),
                 postfields = toJSON(list(value = list("\uE009","a","\uE009",'\b', term))))
-}
-
-#' Send keys
-#' 
-#' Send a sequence of key strokes to the active element
-#' @param ID an ID element
-#' @export
-element_clear <- function(ID = NULL){
-  
-  if(length(ID)>1){
-    ID = ID[[1]]
-    warning("Multiple elements. Used first.")
-  }
-  
-  invisible(getURL(paste0(seleniumSession$sessionURL, "/element/", ID, "/clear"),
-                   customrequest = "POST",
-                   httpheader = c('Content-Type'='application/json;charset=UTF-8')))
 }
 
 

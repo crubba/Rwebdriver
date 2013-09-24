@@ -1,6 +1,6 @@
 \name{element_ptext_find}
 \alias{element_ptext_find}
-\title{Find an element via CSS selector}
+\title{Find an element via partial text matching}
 \usage{
   element_ptext_find(value)
 }

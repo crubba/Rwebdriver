@@ -1,6 +1,6 @@
 \name{start_session}
 \alias{start_session}
-\title{Creates a new Webdriver session}
+\title{Create a new Webdriver session}
 \usage{
   start_session(root = NULL, browser = "firefox",
     javascriptEnabled = TRUE, takesScreenshot = TRUE,
@@ -36,7 +36,7 @@
   A list describing the session's capabilities.
 }
 \description{
-  Creates a new Webdriver session with specificed
-  capabilities
+  This function creates a new Webdriver session with
+  specificed capabilities
 }
 

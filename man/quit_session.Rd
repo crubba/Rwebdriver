@@ -1,6 +1,6 @@
 \name{quit_session}
 \alias{quit_session}
-\title{Quites the current session}
+\title{Quite the current session}
 \usage{
   quit_session()
 }

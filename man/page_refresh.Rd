@@ -1,6 +1,6 @@
 \name{page_refresh}
 \alias{page_refresh}
-\title{Refresh window}
+\title{Refresh page}
 \usage{
   page_refresh()
 }
